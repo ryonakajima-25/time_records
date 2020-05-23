@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(127, 240, 255);
+  height: 600px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  line-height: 80px;
+  background-color: rgb(0, 133, 221);
+  .title {
+    font-size: 40px;
+  }
+}

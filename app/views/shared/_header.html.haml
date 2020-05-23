@@ -1,0 +1,8 @@
+.header
+  .content.title
+    TimeRecords
+  .content
+    ログイン中: #{@user.last_name} #{@user.first_name}
+  .content
+    = link_to destroy_user_session_path , method: :delete do
+      ログアウト

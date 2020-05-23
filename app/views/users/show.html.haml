@@ -1,0 +1,15 @@
+
+
+.touch_form
+  - if @user.status == false
+    .off_job
+      出勤する
+      = link_to job_time_index_path(user_id: @user.id), method: :post
+
+  - if @user.status == true
+    .on_job
+      出勤中
+
+  .button
+    打刻
+

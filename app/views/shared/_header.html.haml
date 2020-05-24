@@ -2,7 +2,11 @@
   .content.title
     TimeRecords
   .content
-    ログイン中: #{@user.last_name} #{@user.first_name}
+    - if current_user
+      ログイン中: #{@user.last_name} #{@user.first_name}
+    - else
+      ログインしていません
   .content
-    = link_to destroy_user_session_path , method: :delete do
-      ログアウト
+    - if current_user
+      = link_to destroy_user_session_path , method: :delete do
+        ログアウト

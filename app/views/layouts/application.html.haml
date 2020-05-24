@@ -10,7 +10,8 @@
     -# = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'shared/header'
-    #flash
-      = flash[:notice]
-    = yield
+    .yield
+      #flash
+        = flash[:notice]
+      = yield
     = javascript_include_tag 'time'

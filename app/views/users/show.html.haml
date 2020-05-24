@@ -1,9 +1,9 @@
-
-
 .touch_form
   .time_now
-    .span
+    .p
       現在時刻
+    .p
+      #{Date.today.month}月#{Date.today.day}日
     #time
 
   - if @user.status == false

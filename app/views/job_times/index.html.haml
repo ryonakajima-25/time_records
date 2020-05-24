@@ -1,0 +1,18 @@
+
+.index
+  %h2 勤怠一覧の画面
+  %table
+    %tr
+      %th 日付
+      %th 出勤時刻
+      %th 退勤時刻
+      %th 休憩時間
+    - @thisMonth_jobTimes.each do |d|
+      %tr
+        %td #{d.startTime.month}月 #{d.startTime.day}日
+        %td #{d.startTime.hour}時 #{d.startTime.min}分
+        - if d.endTime
+          %td #{d.endTime.hour}時 #{d.endTime.min}分
+        - else
+          %td 出勤中
+        %td 実装予定

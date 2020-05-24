@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: :show
+  before_action :authenticate_user!
 
   def show
     @user = current_user
@@ -7,7 +7,4 @@ class UsersController < ApplicationController
       @jobTime = JobTime.find_by(user_id: current_user.id)
     end
   end
-
-
-
 end

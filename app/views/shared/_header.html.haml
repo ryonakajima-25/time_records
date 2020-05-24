@@ -1,12 +1,16 @@
 .header
   .content.title
-    TimeRecords
+    = link_to root_path  do
+      TimeRecords
   - if current_user
+    .content
+      = link_to job_times_path  do
+        勤怠一覧
     .content
       ログイン中: #{@user.last_name} #{@user.first_name}
     .content
-    = link_to destroy_user_session_path , method: :delete do
-      ログアウト
+      = link_to destroy_user_session_path , method: :delete do
+        ログアウト
   - else
     .content
       現在ログインしていません
